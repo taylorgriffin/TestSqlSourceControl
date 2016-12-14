@@ -1,5 +1,8 @@
 {
   "About this file": "This is a Redgate SQL Source Control metadata file. It controls the order that changes are deployed in. Learn more: http://www.red-gate.com/SOC4/order-file-more-info",
-  "Deployment order": [],
+  "Deployment order": [
+    {"Description":"Changes before migration script 'Remove Region'","Type":"Compare","Id":"2016-12-14-131430 in auto"},
+    {"Description":"Migration script 'Remove Region'","Type":"Migration","Id":"2016-12-14-131430 io user"},
+  ],
   "Conflict in this file?": "If there’s a conflict in this file, you probably want to keep both changes. Learn more: http://www.red-gate.com/SOC4/order-file-more-info"
 }
