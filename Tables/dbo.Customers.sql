@@ -10,8 +10,7 @@ CREATE TABLE [dbo].[Customers]
 [PostalCode] [nvarchar] (10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [Country] [nvarchar] (15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [Phone] [nvarchar] (24) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-[Fax] [nvarchar] (24) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-[DOB] [datetime] NULL
+[Fax] [nvarchar] (24) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
 ) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[Customers] ADD CONSTRAINT [PK_Customers] PRIMARY KEY CLUSTERED  ([CustomerID]) ON [PRIMARY]
