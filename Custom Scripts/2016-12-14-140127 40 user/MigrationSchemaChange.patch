@@ -1,0 +1,44 @@
+diff --git a/Tables/dbo.Employees.sql b/Tables/dbo.Employees.sql
+index 6cf16a9..f88e7cc 100644
+--- a/Tables/dbo.Employees.sql
++++ b/Tables/dbo.Employees.sql
+@@ -17,7 +17,8 @@
+ [Photo] [image] NULL,
+ [Notes] [ntext] COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+ [ReportsTo] [int] NULL,
+-[PhotoPath] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
++[PhotoPath] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
++[RegionID] [int] NULL
+ ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+ GO
+ ALTER TABLE [dbo].[Employees] WITH NOCHECK ADD CONSTRAINT [CK_Birthdate] CHECK (([BirthDate]<getdate()))
+diff --git a/Tables/dbo.Region.sql b/Tables/dbo.Region.sql
+deleted file mode 100644
+index 67ecdd3..0000000
+--- a/Tables/dbo.Region.sql
++++ /dev/null
+@@ -1,8 +0,0 @@
+-CREATE TABLE [dbo].[Region]
+-(
+-[RegionID] [int] NOT NULL,
+-[RegionDescription] [nchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL
+-) ON [PRIMARY]
+-GO
+-ALTER TABLE [dbo].[Region] ADD CONSTRAINT [PK_Region] PRIMARY KEY NONCLUSTERED  ([RegionID]) ON [PRIMARY]
+-GO
+diff --git a/Tables/dbo.Territories.sql b/Tables/dbo.Territories.sql
+index f6de4a8..b894b82 100644
+--- a/Tables/dbo.Territories.sql
++++ b/Tables/dbo.Territories.sql
+@@ -2,10 +2,8 @@
+ (
+ [TerritoryID] [nvarchar] (20) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+ [TerritoryDescription] [nchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+-[RegionID] [int] NOT NULL
++[Region] [nchar] (100) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+ ) ON [PRIMARY]
+ GO
+ ALTER TABLE [dbo].[Territories] ADD CONSTRAINT [PK_Territories] PRIMARY KEY NONCLUSTERED  ([TerritoryID]) ON [PRIMARY]
+-GO
+-ALTER TABLE [dbo].[Territories] ADD CONSTRAINT [FK_Territories_Region] FOREIGN KEY ([RegionID]) REFERENCES [dbo].[Region] ([RegionID])
+ GO

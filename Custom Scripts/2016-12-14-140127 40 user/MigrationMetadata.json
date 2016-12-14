@@ -1,0 +1,21 @@
+{
+  "Id": "6b941e1e-459a-4e18-b061-282b133fb89c",
+  "Name": "Covers changes to: Employees, Region, Territories. Script created at 2016-12-14 13:58.",
+  "ObjectIds": [
+    {
+      "Name": "Employees",
+      "Owner": "dbo",
+      "ObjectType": "Table"
+    },
+    {
+      "Name": "Region",
+      "Owner": "dbo",
+      "ObjectType": "Table"
+    },
+    {
+      "Name": "Territories",
+      "Owner": "dbo",
+      "ObjectType": "Table"
+    }
+  ]
+}
