@@ -17,7 +17,8 @@ CREATE TABLE [dbo].[Employees]
 [Photo] [image] NULL,
 [Notes] [ntext] COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [ReportsTo] [int] NULL,
-[PhotoPath] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+[PhotoPath] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[RegionID] [int] NULL
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[Employees] WITH NOCHECK ADD CONSTRAINT [CK_Birthdate] CHECK (([BirthDate]<getdate()))
