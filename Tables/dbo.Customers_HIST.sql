@@ -14,7 +14,8 @@ CREATE TABLE [dbo].[Customers_HIST]
 [Country] [nvarchar] (15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [Phone] [nvarchar] (24) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 [Fax] [nvarchar] (24) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-[DOB] [datetime] NULL
+[DOB] [datetime] NULL,
+[FakeAlias] [varchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
 ) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[Customers_HIST] ADD CONSTRAINT [PK_Customers_HIST] PRIMARY KEY CLUSTERED  ([Customers_HIST_PK]) ON [PRIMARY]
